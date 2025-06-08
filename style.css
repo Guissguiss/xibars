@@ -1,0 +1,178 @@
+/*
+Theme Name: Divi Child - xibars
+Theme URI: http://doynawar.com/
+Description: Thème enfant pour le site Doynawar
+Author: Votre Nom
+Author URI: http://doynawar.com
+Template: Divi
+Version: 1.0.0
+*/
+
+/* --- Styles Généraux pour les Articles en Grille (si utilisés) --- */
+.et_pb_posts .et_pb_blog_grid .et_pb_post {
+    border: 1px solid #eee; /* Bordure légère */
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1); /* Légère ombre */
+    transition: all 0.3s ease-in-out; /* Effet de transition au survol */
+}
+
+.et_pb_posts .et_pb_blog_grid .et_pb_post:hover {
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2); /* Ombre plus prononcée au survol */
+}
+
+/* --- Styles pour les Titres des Articles dans les Modules Blog (général) --- */
+/* Ces styles s'appliquent à tous les titres si non écrasés par des styles plus spécifiques */
+.et_pb_post_title {
+    font-family: 'Open Sans', sans-serif; /* Exemple de police */
+    color: #333;
+    font-size: 20px;
+    line-height: 1.2em;
+}
+
+/* --- Styles pour la Section Orange de l'En-tête (Promo) --- */
+.et_pb_section.custom-header-promo { /* Ajoutez cette classe CSS à votre section dans Divi */
+    background-color: #FF5722 !important; /* Exemple d'orange vif */
+    padding: 10px 0 !important;
+}
+
+/* --- Styles pour les Blocs ALB1, ALB2, PLR --- */
+.promo-banner-text { /* Ajoutez cette classe CSS à vos modules texte */
+    background-color: rgba(255,255,255,0.2); /* Fond semi-transparent */
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 5px 10px;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* -------------------------------------------------------- */
+/* --- Styles pour le bandeau "Sport" (Classe: sport-category-tab) --- */
+/* -------------------------------------------------------- */
+.sport-category-tab {
+    background-color: #E74C3C; /* Rouge vif */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 15px; /* Ajustez le padding si nécessaire */
+    position: relative; /* Nécessaire pour positionner les pseudo-éléments */
+    display: inline-block; /* Pour que le background ne prenne que la largeur du contenu */
+    /* Assurez-vous que le module Texte n'a pas de marges ou padding excessifs dans Divi */
+    margin: 0;
+    line-height: 1; /* Pour assurer que la hauteur de l'élément est juste la hauteur du texte */
+    font-size: 16px; /* Ajustez la taille de police si nécessaire */
+}
+
+/* Forme du coin coupé (pseudo-élément ::after du bandeau "Sport") */
+.sport-category-tab:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px; /* Ajustez pour la taille du coin coupé */
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent; /* Hauteur de la pointe supérieure */
+    border-bottom: 15px solid transparent; /* Hauteur de la pointe inférieure */
+    border-left: 10px solid #E74C3C; /* Largeur de la pointe et couleur */
+    /* Ajustez les valeurs 15px et 10px pour affiner la forme du triangle si nécessaire */
+}
+
+/* -------------------------------------------------------- */
+/* --- Styles pour les pointillés à droite du bandeau "Sport" (Classe: dotted-separator) --- */
+/* -------------------------------------------------------- */
+.dotted-separator {
+    display: inline-block; /* Important pour qu'il soit sur la même ligne que "Sport" */
+    vertical-align: middle; /* Alignement vertical avec le texte "Sport" */
+    width: 200px; /* Largeur des pointillés, ajustez pour qu'ils s'étendent */
+    height: 30px; /* HAUTEUR pour accueillir les 4 rangées de points */
+    background: radial-gradient(circle at center, #ddd 1px, transparent 1px); /* Motif de point */
+    background-size: 5px 7.5px; /* Premier chiffre: espacement horizontal, Second chiffre: espacement vertical */
+    background-repeat: repeat; /* Répétez le motif dans les deux directions */
+    margin-left: 15px; /* Espace entre le coin coupé et le début des pointillés */
+}
+
+/* --- Styles pour les Méta-informations des articles (Date | Catégorie) --- */
+.et_pb_post .post-meta {
+    font-size: 13px; /* Ajustez la taille */
+    color: #777; /* Couleur grise */
+}
+.et_pb_post .post-meta a {
+    color: #777; /* S'assurer que les liens des catégories gardent la même couleur */
+}
+
+/* --- Styles pour l'espacement sous les éléments de l'article (image, titre, méta) --- */
+.et_pb_post_main_image {
+    margin-bottom: 15px; /* Espace sous l'image */
+}
+.et_pb_post_title {
+    margin-bottom: 10px; /* Espace sous le titre */
+}
+.et_pb_post .post-meta {
+    margin-bottom: 10px; /* Espace sous la méta */
+}
+
+/* -------------------------------------------------------- */
+/* --- Styles Spécifiques pour le Module Blog "Miniatures" (Classe: blog-miniatures-special) --- */
+/* -------------------------------------------------------- */
+
+/* Cible les images à la une dans les modules Blog avec la classe "blog-miniatures-special" */
+.blog-miniatures-special .et_pb_post_main_image img {
+    width: 100px !important;  /* Largeur de l'image miniature */
+    height: 80px !important; /* Hauteur de l'image miniature */
+    object-fit: cover; /* Recadre l'image pour couvrir l'espace sans déformation */
+    display: block; /* Assure que l'image se comporte comme un bloc */
+    float: left; /* Permet au texte de s'aligner à droite */
+    margin-right: 15px; /* Espacement entre l'image et le texte */
+}
+
+/* Ajuste l'espacement pour l'image conteneur (si nécessaire) */
+.blog-miniatures-special .et_pb_post_main_image {
+    margin-right: 0 !important; /* Annule toute marge par défaut qui pourrait gêner le flottement */
+}
+
+/* Assure que le texte s'affiche correctement à côté de l'image flottante */
+.blog-miniatures-special .et_pb_post_content {
+    overflow: hidden; /* Déclenche un nouveau contexte de formatage pour les éléments flottants */
+    /* ou un display: flow-root; pour les navigateurs modernes */
+}
+
+/* Styles pour le titre des articles miniatures */
+.blog-miniatures-special h2.entry-title, /* Cible les titres h2 générés par Divi */
+.blog-miniatures-special .et_pb_post_title { /* Cible la classe Divi pour les titres */
+    font-size: 14px !important; /* Taille de police du titre miniature */
+    line-height: 1.3 !important;
+    margin-bottom: 5px !important; /* Réduit l'espace sous le titre des miniatures */
+}
+
+/* Styles pour les méta-informations des articles miniatures */
+.blog-miniatures-special .post-meta {
+    font-size: 11px !important; /* Taille de police des méta miniatures */
+    color: #999 !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0 !important; /* Réduit l'espace sous les méta des miniatures */
+}
+
+/* Styles pour l'extrait des articles miniatures (s'il est activé) */
+.blog-miniatures-special .post-content {
+    font-size: 12px !important; /* Taille de police de l'extrait miniature */
+    line-height: 1.5 !important;
+    margin-bottom: 0 !important; /* Réduit l'espace sous l'extrait des miniatures */
+}
+
+/* Ajustement de l'espacement entre chaque article miniature */
+.blog-miniatures-special .et_pb_post {
+    margin-bottom: 20px !important; /* Espace entre chaque article miniature (ajustez si besoin) */
+    padding-bottom: 0 !important; /* Enlève tout padding bas par défaut sur l'article */
+    border-bottom: none !important; /* Enlève la bordure du bas si Divi en ajoute une entre les posts */
+}
+
+/* Enlève la bordure ou le padding du dernier article miniature si nécessaire */
+.blog-miniatures-special .et_pb_post:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Empêche les images génériques de 100% de large / 200px de haut d'interférer, car elles sont dupliquées */
+/* Celles-ci sont maintenant commentées ou retirées du fichier final pour éviter les conflits. */
+/* .et_pb_post .et_pb_post_main_image { max-width: 100%; height: auto; display: block; } */
+/* .et_pb_post .et_pb_post_main_image img { width: 100%; height: 200px; object-fit: cover; } */
