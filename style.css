@@ -176,3 +176,116 @@ Version: 1.0.0
 /* Celles-ci sont maintenant commentées ou retirées du fichier final pour éviter les conflits. */
 /* .et_pb_post .et_pb_post_main_image { max-width: 100%; height: auto; display: block; } */
 /* .et_pb_post .et_pb_post_main_image img { width: 100%; height: 200px; object-fit: cover; } */
+
+/* === Mise en page globale === */
+.promo-header {
+    background: url('../images/promo.jpg') center center no-repeat;
+    background-size: cover;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+/* Structure des colonnes principales */
+.main-content {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.column-left,
+.column-center,
+.column-right {
+    padding: 10px;
+}
+
+/* Largeurs adaptées */
+.column-left {
+    width: 25%;
+}
+
+.column-center {
+    width: 50%;
+}
+
+.column-right {
+    width: 25%;
+}
+
+/* === Sections spécifiques === */
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #c62828;
+    border-bottom: 2px solid #c62828;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* === Articles généraux === */
+.feature-article,
+.thumb-article,
+.small-article,
+.video-article,
+.media-article {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.feature-article h3,
+.thumb-article h3,
+.small-article h3,
+.video-article h3,
+.media-article h3 {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.feature-article img,
+.thumb-article img,
+.small-article img,
+.video-article img,
+.media-article img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* === Commentaires récents === */
+.recent-comments ul {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+}
+
+.recent-comments li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+/* === Articles récents === */
+.recent-posts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-posts li {
+    margin-bottom: 5px;
+}
+
+/* === Responsive === */
+@media screen and (max-width: 960px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .column-left,
+    .column-center,
+    .column-right {
+        width: 100%;
+    }
+}
