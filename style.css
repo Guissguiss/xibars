@@ -289,3 +289,129 @@ section h2 {
         width: 100%;
     }
 }
+
+/* === Promo header === */
+.promo-header {
+    background: url('../images/promo.jpg') center center no-repeat;
+    background-size: cover;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+/* === Structure générale === */
+.main-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    background: #f7f7f7;
+}
+
+.column-left,
+.column-center,
+.column-right {
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Largeurs */
+.column-left {
+    width: 25%;
+}
+
+.column-center {
+    width: 50%;
+}
+
+.column-right {
+    width: 25%;
+}
+
+/* === Titres de section === */
+section h2 {
+    font-size: 18px;
+    color: #c62828;
+    border-left: 4px solid #c62828;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+/* === Articles vedette === */
+.featured {
+    margin-bottom: 20px;
+}
+
+.featured-article img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.featured-article h3 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+}
+
+/* === Articles par défaut (thumbnail, grid, etc.) === */
+.thumb-article,
+.grid-article,
+.small-article,
+.video-article,
+.media-article {
+    margin-bottom: 15px;
+}
+
+.thumb-article img,
+.grid-article img,
+.small-article img,
+.video-article img,
+.media-article img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.thumb-article h3,
+.grid-article h3,
+.small-article h3,
+.video-article h3,
+.media-article h3 {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+/* === People list === */
+.people-list li {
+    list-style: none;
+    margin-bottom: 10px;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 5px;
+}
+
+/* === Articles récents === */
+.recent-posts li {
+    list-style: none;
+    border-bottom: 1px solid #eee;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+/* === Commentaires récents === */
+.commentaires-recents li {
+    font-size: 13px;
+    padding: 4px 0;
+    border-bottom: 1px dotted #ccc;
+    list-style: none;
+}
+
+/* === Responsive mobile === */
+@media screen and (max-width: 960px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .column-left,
+    .column-center,
+    .column-right {
+        width: 100%;
+    }
+}
