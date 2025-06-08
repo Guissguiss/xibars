@@ -6,3 +6,4 @@ Ce thème enfant est utilisé pour personnaliser l’apparence du site [doynawar
 - Mise en page avec miniatures style presse
 - Bandeaux de catégorie stylisés
 - En-tête promo personnalisable
+"// force redeploy" 
