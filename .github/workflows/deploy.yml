@@ -1,4 +1,4 @@
-name: 🚀 Déploiement vers doynawar.com via FTP
+name: Déploiement vers doynawar.com via FTP
 
 on:
   push:
@@ -7,18 +7,18 @@ on:
 
 jobs:
   ftp-deploy:
-    name: 🔁 Déployer via FTP
+    name: Déploiement FTP
     runs-on: ubuntu-latest
 
     steps:
-    - name: 📥 Cloner le dépôt
-      uses: actions/checkout@v3
+      - name: Récupération des fichiers depuis le dépôt
+        uses: actions/checkout@v3
 
-    - name: 🚀 Déployer via FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ${{ secrets.FTP_HOST }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: ${{ secrets.FTP_TARGET }}
-        local-dir: ./
+      - name: Déploiement via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: "/home1/doynawa1/public_html/wp-content/themes/xibars/"
+          local-dir: "."  # Très important pour éviter la duplication des dossiers
