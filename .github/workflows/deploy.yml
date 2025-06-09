@@ -14,11 +14,11 @@ jobs:
       - name: Récupération des fichiers depuis le dépôt
         uses: actions/checkout@v3
 
-      - name: Déploiement via FTP
+      - name: Déploiement via FTP (corrigé)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: "/home1/doynawa1/public_html/wp-content/themes/xibars/"
-          local-dir: "xibars/"
+          local-dir: "./"
